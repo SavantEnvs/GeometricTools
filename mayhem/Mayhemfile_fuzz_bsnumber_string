@@ -1,0 +1,9 @@
+project: savantenvs/GeometricTools
+target: fuzz_bsnumber_string
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_bsnumber_string/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_bsnumber_string
+    libfuzzer: true
+    timeout: 30
